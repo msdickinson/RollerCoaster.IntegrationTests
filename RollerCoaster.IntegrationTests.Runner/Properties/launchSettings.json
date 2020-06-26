@@ -1,0 +1,15 @@
+﻿{
+  "profiles": {
+    "DEBUG": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "BUILD_CONFIGURATION": "DEBUG",
+        "REG_EXP_TEST_NAMES": ".*",
+        "SHOW_LOGS": "False",
+        "SHOW_SUCCESS_LOGS_ON_SUCCESS": "False",
+        "SHOW_SUCCESS_LOGS_ON_FAILURE": "True",
+        "SHOW_TEST_EXCEPTION": "True"
+      }
+    }
+  }
+}
