@@ -204,7 +204,7 @@ namespace RollerCoaster.IntegrationTests.Account
                 Assert.IsNull(account.Email, $"AccountDBService.SelectAccountByUsernameAsync - Email is not null");
                 successLog.Add($"AccountDBService.SelectAccountByUsernameAsync - Email is null");
                 
-                Assert.AreEqual("f3f3f", account.Username, $"AccountDBService.SelectAccountByUsernameAsync - Username matchs");
+                Assert.AreEqual(request.Username, account.Username, $"AccountDBService.SelectAccountByUsernameAsync - Username does not match");
                 successLog.Add($"AccountDBService.SelectAccountByUsernameAsync - Username matchs");
 
             }
