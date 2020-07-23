@@ -15,3 +15,8 @@ steps:
     script: |
       $wc = New-Object System.Net.WebClient
       $wc.DownloadFile("https://storageaccountrolleae6c.blob.core.windows.net/roller-coaster/TemplateFill.trx", "TemplateFill.trx")
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/TemplateFill.trx'
