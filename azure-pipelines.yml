@@ -1,3 +1,5 @@
+trigger: none
+
 pool:
  vmImage: 'windows-latest'
 
@@ -13,8 +15,3 @@ steps:
     Destination: 'AzureBlob'
     storage: 'storageaccountrolleae6c'
     ContainerName: 'roller-coaster''
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'VSTest'
-    testResultsFiles: '**/TemplateFill.trx'
