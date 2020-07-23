@@ -11,7 +11,6 @@ steps:
 - task: InlinePowershell@1
   inputs:
     Script: '
-$(System.DefaultWorkingDirectory)
 $url = "https://storageaccountrolleae6c.blob.core.windows.net/roller-coaster/TemplateFill.trx"
 $output = $(System.DefaultWorkingDirectory) + "\TemplateFill.trx"
 $start_time = Get-Date
