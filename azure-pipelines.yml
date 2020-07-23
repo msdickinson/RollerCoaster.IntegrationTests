@@ -10,7 +10,8 @@ steps:
 
 - task: InlinePowershell@1
   inputs:
-    Script: '$url = "https://storageaccountrolleae6c.blob.core.windows.net/roller-coaster/TemplateFill.trx"
+    Script: '
+$url = "https://storageaccountrolleae6c.blob.core.windows.net/roller-coaster/TemplateFill.trx"
 $output = "TemplateFill.trx"
 $start_time = Get-Date
 
