@@ -8,10 +8,7 @@ variables:
 
 steps:
 
-- task: AzureFileCopy@4
+- task: InlinePowershell@1
   inputs:
-    SourcePath: 'TemplateFill.trx'
-    azureSubscription: 'Free Trial(eb1f524e-8b8f-4d81-a10e-1dbced036254)'
-    Destination: 'AzureBlob'
-    storage: 'storageaccountrolleae6c'
-    ContainerName: 'roller-coaster'
+    Script: '$client = new-object System.Net.WebClient
+             $client.DownloadFile("https://storageaccountrolleae6c.blob.core.windows.net/roller-coaster/TemplateFill.trx","TemplateFill.trx")'
