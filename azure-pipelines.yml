@@ -1,0 +1,20 @@
+pool:
+ vmImage: 'windows-latest'
+
+variables:
+  buildConfiguration: 'Debug'
+
+steps:
+
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: 'TemplateFill.trx'
+    azureSubscription: 'Free Trial(eb1f524e-8b8f-4d81-a10e-1dbced036254)'
+    Destination: 'AzureBlob'
+    storage: 'storageaccountrolleae6c'
+    ContainerName: 'roller-coaster''
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/TemplateFill.trx'
