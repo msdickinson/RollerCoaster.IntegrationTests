@@ -11,9 +11,5 @@ steps:
 - task: InlinePowershell@1
   inputs:
     Script: '
-$url = "https://storageaccountrolleae6c.blob.core.windows.net/roller-coaster/TemplateFill.trx"
-$output = $(System.DefaultWorkingDirectory) + "\TemplateFill.trx"
-$start_time = Get-Date
-
 $wc = New-Object System.Net.WebClient
-$wc.DownloadFile($url, $output)'
+$wc.DownloadFile("https://storageaccountrolleae6c.blob.core.windows.net/roller-coaster/TemplateFill.trx", TemplateFill.trx)'
